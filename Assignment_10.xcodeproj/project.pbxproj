@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		0DCDA527270B88EC00CC6805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA526270B88EC00CC6805 /* AppDelegate.swift */; };
 		0DCDA529270B88EC00CC6805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA528270B88EC00CC6805 /* SceneDelegate.swift */; };
-		0DCDA52B270B88EC00CC6805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA52A270B88EC00CC6805 /* ViewController.swift */; };
+		0DCDA52B270B88EC00CC6805 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA52A270B88EC00CC6805 /* MainViewController.swift */; };
 		0DCDA52E270B88EC00CC6805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCDA52C270B88EC00CC6805 /* Main.storyboard */; };
 		0DCDA530270B88ED00CC6805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCDA52F270B88ED00CC6805 /* Assets.xcassets */; };
 		0DCDA533270B88ED00CC6805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCDA531270B88ED00CC6805 /* LaunchScreen.storyboard */; };
+		0DCDA53B270B938000CC6805 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA53A270B938000CC6805 /* Pokemon.swift */; };
+		0DCDA540270B9A7700CC6805 /* PokemonSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */; };
+		0DCDA542270B9F0A00CC6805 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA541270B9F0A00CC6805 /* BasicCell.swift */; };
+		0DCDA544270BA42200CC6805 /* EnlargedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DCDA523270B88EC00CC6805 /* Assignment_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCDA526270B88EC00CC6805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DCDA528270B88EC00CC6805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DCDA52A270B88EC00CC6805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DCDA52A270B88EC00CC6805 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0DCDA52D270B88EC00CC6805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DCDA52F270B88ED00CC6805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DCDA532270B88ED00CC6805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DCDA534270B88ED00CC6805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DCDA53A270B938000CC6805 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSource.swift; sourceTree = "<group>"; };
+		0DCDA541270B9F0A00CC6805 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnlargedViewController.swift; path = ../View/EnlargedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,41 @@
 			children = (
 				0DCDA526270B88EC00CC6805 /* AppDelegate.swift */,
 				0DCDA528270B88EC00CC6805 /* SceneDelegate.swift */,
-				0DCDA52A270B88EC00CC6805 /* ViewController.swift */,
-				0DCDA52C270B88EC00CC6805 /* Main.storyboard */,
+				0DCDA53D270B946900CC6805 /* Controller */,
+				0DCDA53C270B943E00CC6805 /* Model */,
+				0DCDA53E270B948500CC6805 /* View */,
 				0DCDA52F270B88ED00CC6805 /* Assets.xcassets */,
-				0DCDA531270B88ED00CC6805 /* LaunchScreen.storyboard */,
 				0DCDA534270B88ED00CC6805 /* Info.plist */,
 			);
 			path = Assignment_10;
+			sourceTree = "<group>";
+		};
+		0DCDA53C270B943E00CC6805 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DCDA53A270B938000CC6805 /* Pokemon.swift */,
+				0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DCDA53D270B946900CC6805 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */,
+				0DCDA52A270B88EC00CC6805 /* MainViewController.swift */,
+				0DCDA541270B9F0A00CC6805 /* BasicCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DCDA53E270B948500CC6805 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0DCDA52C270B88EC00CC6805 /* Main.storyboard */,
+				0DCDA531270B88ED00CC6805 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DCDA52B270B88EC00CC6805 /* ViewController.swift in Sources */,
+				0DCDA52B270B88EC00CC6805 /* MainViewController.swift in Sources */,
+				0DCDA53B270B938000CC6805 /* Pokemon.swift in Sources */,
+				0DCDA540270B9A7700CC6805 /* PokemonSource.swift in Sources */,
+				0DCDA542270B9F0A00CC6805 /* BasicCell.swift in Sources */,
+				0DCDA544270BA42200CC6805 /* EnlargedViewController.swift in Sources */,
 				0DCDA527270B88EC00CC6805 /* AppDelegate.swift in Sources */,
 				0DCDA529270B88EC00CC6805 /* SceneDelegate.swift in Sources */,
 			);

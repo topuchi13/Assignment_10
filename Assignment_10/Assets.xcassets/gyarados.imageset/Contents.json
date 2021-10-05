@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "gyarados.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
