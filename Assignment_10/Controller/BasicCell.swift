@@ -9,11 +9,6 @@ import UIKit
 
 class BasicCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -27,7 +22,7 @@ class BasicCell: UITableViewCell {
     
     // Defines function to make new Pokemon entries
     
-    func makeNew (myPokemon: Pokemon) {
+    func makeNewPokemon (myPokemon: Pokemon) {
         pokeImage.image = UIImage.init(imageLiteralResourceName: myPokemon.image)
         pokeLabel.text = myPokemon.text
     }
