@@ -22,7 +22,7 @@ class EggGroupManager {
         print ("Trigger fetchEggGroupDetails()")
         
         
-        // Get list of Pokemon Egg Groups
+        // Get list of Pokemon Egg Group pages
         PokemonAPI().pokemonService.fetchEggGroupList(completion: { result in
             switch result {
             case .success(let eggGroupPage):
@@ -35,11 +35,11 @@ class EggGroupManager {
     }
     
     
+    // Fetch actual eggGroups form the given page
     private func fetchGroupList(_ eggs: PKMPagedObject<PKMEggGroup>) {
         print ("Trigger fetchGroupList()")
         
         let myGroup = DispatchGroup()
-        
         for i in 0 ..< eggs.count! {
             myGroup.enter()
             
@@ -59,8 +59,8 @@ class EggGroupManager {
             print("Finished fetching all egg group names.")
             self.fetchFirstPokemonOfSpecie(self.species)
         }
-        
     }
+    
     
     // Get add eggGroup name and Species to respective arrays
     private func fetchNameAndSpecies(_ details: PKMEggGroup) {
@@ -106,6 +106,7 @@ class EggGroupManager {
         
     }
     
+    //Combines all the data into array of EggGroups
     private func appendData() {
         print ("Trigger appendData()")
 //        print (name.count)

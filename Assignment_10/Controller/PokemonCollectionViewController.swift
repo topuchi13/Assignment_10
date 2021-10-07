@@ -32,14 +32,6 @@ class PokemonCollectionViewController: UICollectionViewController{
 
         // Do any additional setup after loading the view.
         
-        
-        //Fetch egg group list
-//        eggGroupManager.fetchEggGroupDetails()
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            self.collectionView.reloadData()
-//        }
-        
     }
 
     
@@ -67,16 +59,18 @@ class PokemonCollectionViewController: UICollectionViewController{
         let name = currentGroup.name
         let imageURL = URL(string: currentGroup.image)
         
-        print ("Collection View triggered name: \(name)")
-        print ("Collection View triggered image: \(currentGroup.image)")
+//        print ("Collection View triggered name: \(name)")
+//        print ("Collection View triggered image: \(currentGroup.image)")
 
         cell.eggGroupImage.kf.setImage(with: imageURL)
         cell.eggGroupLabel.text = name
         
         return cell
-        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
+    }
 
   
 }
