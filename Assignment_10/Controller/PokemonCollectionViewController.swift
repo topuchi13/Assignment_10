@@ -13,25 +13,17 @@ private let reuseIdentifier = "Cell"
 
 class PokemonCollectionViewController: UICollectionViewController{
     
-//    let eggGroupManager = EggGroupManager()
-    
     private let reusableCell = "PokeSection"
     
     var eggGroup: [EggGroup] = []
     
-    private let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
+    private let sectionInsets = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
-        
     }
 
     
@@ -53,8 +45,8 @@ class PokemonCollectionViewController: UICollectionViewController{
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCell, for: indexPath) as! PokeSection
-        // Configure the cell
         
+        // Configure the cell
         let currentGroup = eggGroup[indexPath.row]
         let name = currentGroup.name
         let imageURL = URL(string: currentGroup.image)

@@ -91,7 +91,7 @@ class EggGroupManager {
             PokemonAPI().pokemonService.fetchPokemon(species[i]) { result in
                 switch result {
                 case .success(let pokemon):
-                    self.image.append(pokemon.sprites!.frontShiny!)
+                    self.image.append(pokemon.sprites!.frontDefault!)
                     myGroup.leave()
                 case .failure(let error):
                     print (error)

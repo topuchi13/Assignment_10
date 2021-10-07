@@ -10,7 +10,7 @@
 import UIKit
 //import PokemonAPI
 
-class MainViewController: UIViewController {
+class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var delegate: pokeLargeView?
@@ -24,7 +24,8 @@ class MainViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! pokeLargeView
+        let vc = segue.destination as! EnlargedViewController
+
         self.delegate = vc
     }
 }
@@ -32,7 +33,7 @@ class MainViewController: UIViewController {
 
 //MARK: - UITableViewDataSource extension
 
-extension MainViewController: UITableViewDataSource {
+extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         PokemonSource.count
@@ -50,7 +51,7 @@ extension MainViewController: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate extension
 
-extension MainViewController: UITableViewDelegate {
+extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.pokeShow(PokemonSource[indexPath.row])
     }
