@@ -13,13 +13,14 @@ private let reuseIdentifier = "Cell"
 
 class PokemonCollectionViewController: UICollectionViewController{
     
-    let eggGroupManager = EggGroupManager()
+//    let eggGroupManager = EggGroupManager()
     
     private let reusableCell = "PokeSection"
     
+    var eggGroup: [EggGroup] = []
+    
     private let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +34,12 @@ class PokemonCollectionViewController: UICollectionViewController{
         
         
         //Fetch egg group list
-        eggGroupManager.fetchEggGroupDetails()
+//        eggGroupManager.fetchEggGroupDetails()
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            self.collectionView.reloadData()
+//        }
+        
     }
 
     
@@ -48,7 +54,7 @@ class PokemonCollectionViewController: UICollectionViewController{
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        let count = eggGroupManager.eggGroupList.count
+        let count = eggGroup.count
         print ("Collection View triggered count: \(count)")
         return count
     }
@@ -57,7 +63,7 @@ class PokemonCollectionViewController: UICollectionViewController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reusableCell, for: indexPath) as! PokeSection
         // Configure the cell
         
-        let currentGroup = eggGroupManager.eggGroupList[indexPath.row]
+        let currentGroup = eggGroup[indexPath.row]
         let name = currentGroup.name
         let imageURL = URL(string: currentGroup.image)
         
@@ -66,6 +72,7 @@ class PokemonCollectionViewController: UICollectionViewController{
 
         cell.eggGroupImage.kf.setImage(with: imageURL)
         cell.eggGroupLabel.text = name
+        
         return cell
         
     }
