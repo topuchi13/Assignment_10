@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0040182710C94D00A169E7 /* PokemonListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0040172710C94D00A169E7 /* PokemonListManager.swift */; };
 		0DB1968E270F3D3A000AC149 /* EggGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1968D270F3D3A000AC149 /* EggGroupManager.swift */; };
 		0DCDA527270B88EC00CC6805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA526270B88EC00CC6805 /* AppDelegate.swift */; };
 		0DCDA529270B88EC00CC6805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA528270B88EC00CC6805 /* SceneDelegate.swift */; };
@@ -17,7 +18,6 @@
 		0DCDA53B270B938000CC6805 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA53A270B938000CC6805 /* Pokemon.swift */; };
 		0DCDA540270B9A7700CC6805 /* PokemonSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */; };
 		0DCDA542270B9F0A00CC6805 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA541270B9F0A00CC6805 /* BasicCell.swift */; };
-		0DCDA544270BA42200CC6805 /* EnlargedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */; };
 		0DD412CF270E08D400D1AF36 /* PokemonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD412CE270E08D400D1AF36 /* PokemonCollectionViewController.swift */; };
 		0DD412D7270E3B5200D1AF36 /* PokeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD412D6270E3B5200D1AF36 /* PokeSection.swift */; };
 		0DD412D9270E3CA300D1AF36 /* EggGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD412D8270E3CA300D1AF36 /* EggGroup.swift */; };
@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D0040172710C94D00A169E7 /* PokemonListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListManager.swift; sourceTree = "<group>"; };
 		0DB1968D270F3D3A000AC149 /* EggGroupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggGroupManager.swift; sourceTree = "<group>"; };
 		0DCDA523270B88EC00CC6805 /* Assignment_10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCDA526270B88EC00CC6805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		0DCDA53A270B938000CC6805 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSource.swift; sourceTree = "<group>"; };
 		0DCDA541270B9F0A00CC6805 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
-		0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnlargedViewController.swift; path = ../View/EnlargedViewController.swift; sourceTree = "<group>"; };
 		0DD412CE270E08D400D1AF36 /* PokemonCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokemonCollectionViewController.swift; path = Assignment_10/Controller/PokemonCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		0DD412D6270E3B5200D1AF36 /* PokeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PokeSection.swift; path = Assignment_10/View/PokeSection.swift; sourceTree = SOURCE_ROOT; };
 		0DD412D8270E3CA300D1AF36 /* EggGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggGroup.swift; sourceTree = "<group>"; };
@@ -97,6 +97,7 @@
 			children = (
 				0DB1968D270F3D3A000AC149 /* EggGroupManager.swift */,
 				0DCDA53A270B938000CC6805 /* Pokemon.swift */,
+				0D0040172710C94D00A169E7 /* PokemonListManager.swift */,
 				0DCDA53F270B9A7700CC6805 /* PokemonSource.swift */,
 				0DD412D8270E3CA300D1AF36 /* EggGroup.swift */,
 			);
@@ -108,7 +109,6 @@
 			children = (
 				0DF8F41C270F88BE0043A08E /* EntryViewController.swift */,
 				0DD412D6270E3B5200D1AF36 /* PokeSection.swift */,
-				0DCDA543270BA42200CC6805 /* EnlargedViewController.swift */,
 				0DCDA52A270B88EC00CC6805 /* ListViewController.swift */,
 				0DD412CE270E08D400D1AF36 /* PokemonCollectionViewController.swift */,
 				0DCDA541270B9F0A00CC6805 /* BasicCell.swift */,
@@ -263,9 +263,9 @@
 				0DCDA540270B9A7700CC6805 /* PokemonSource.swift in Sources */,
 				0DCDA542270B9F0A00CC6805 /* BasicCell.swift in Sources */,
 				0DF8F41D270F88BE0043A08E /* EntryViewController.swift in Sources */,
+				0D0040182710C94D00A169E7 /* PokemonListManager.swift in Sources */,
 				0DD412D9270E3CA300D1AF36 /* EggGroup.swift in Sources */,
 				0DD412CF270E08D400D1AF36 /* PokemonCollectionViewController.swift in Sources */,
-				0DCDA544270BA42200CC6805 /* EnlargedViewController.swift in Sources */,
 				0DCDA527270B88EC00CC6805 /* AppDelegate.swift in Sources */,
 				0DCDA529270B88EC00CC6805 /* SceneDelegate.swift in Sources */,
 				0DB1968E270F3D3A000AC149 /* EggGroupManager.swift in Sources */,

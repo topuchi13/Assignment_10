@@ -19,8 +19,9 @@ class EntryViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! PokemonCollectionViewController
-        
+
         vc.eggGroup = eggGroupManager.eggGroupList
+        vc.pokemonListManager.fetchAllSpecies(eggGroupManager.name, eggGroupManager.species)
     }
     
 

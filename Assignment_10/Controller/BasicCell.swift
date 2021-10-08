@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import PokemonAPI
 
 class BasicCell: UITableViewCell {
 
@@ -22,9 +24,9 @@ class BasicCell: UITableViewCell {
     
     // Defines function to make new Pokemon entries
     
-    func makeNewPokemon (myPokemon: Pokemon) {
-        pokeImage.image = UIImage.init(imageLiteralResourceName: myPokemon.image)
-        pokeLabel.text = myPokemon.text
+    func makeNewPokemon (myPokemon: PKMPokemon) {
+        pokeImage.kf.setImage(with: URL(string: myPokemon.sprites!.frontDefault!))
+        pokeLabel.text = myPokemon.name
     }
     
     

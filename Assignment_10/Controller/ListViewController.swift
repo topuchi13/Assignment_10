@@ -13,7 +13,10 @@ import UIKit
 class ListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var delegate: pokeLargeView?
+    
+    var selectedSpecie: String = ""
+    
+    //var delegate: pokeLargeView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +26,11 @@ class ListViewController: UIViewController {
         
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! EnlargedViewController
-
-        self.delegate = vc
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! EnlargedViewController
+//
+//        self.delegate = vc
+//    }
 }
 
 
@@ -36,13 +39,13 @@ class ListViewController: UIViewController {
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        PokemonSource.count
+        PokemonSource[selectedSpecie]!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell", for: indexPath) as! BasicCell
         
-        cell.makeNewPokemon(myPokemon: PokemonSource[indexPath.row])
+        cell.makeNewPokemon(myPokemon: PokemonSource[selectedSpecie]![indexPath.row])
         
         return cell
     }
@@ -53,7 +56,7 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.pokeShow(PokemonSource[indexPath.row])
+        //delegate?.pokeShow(PokemonSource[indexPath.row])
     }
 }
 
